@@ -1,10 +1,8 @@
 <?php
 session_start();
 
-// Conexão com o SQLite
 include('conexao.php');
 
-// Função para sanitizar entradas
 function escape($value) {
     global $db;
     return $db->escapeString(trim($value));
